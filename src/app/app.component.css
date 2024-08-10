@@ -1,0 +1,13 @@
+.profile-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .po-avatar {
+    margin-right: 24px; /* Ajuste a margem conforme necessário */
+  }
+  
+  p {
+    margin: 0;
+  }
+  

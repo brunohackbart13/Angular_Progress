@@ -1,14 +1,27 @@
 <div class="po-wrapper">
-  <po-toolbar p-title="Angular_Progress"></po-toolbar>
-
+  <po-toolbar p-title="Angular_Progress"></po-toolbar> 
   <po-menu [p-menus]="menus"></po-menu>
+  <po-page-default p-title="Angular_Progress">
+    <div *ngIf="selectedContent === 'profile'" class="profile-container">
+      <po-avatar
+          p-size="xl"
+          p-src="https://avatars.githubusercontent.com/u/127060261?v=4">
+      </po-avatar>
+      <p> Meu nome é Bruno Hackbart Nunes, sou técnico em automação industrial,<br>
+        estudante na área de T.I.<br>
+        Atualmente estou fazendo uma graduação em Análise e desenvolvimento de<br>
+        sistemas. Estou iniciando uma jornada de estudos na área de programação, <br>
+        onde estou utilizando as tecnologias : Progress (Open Edge), Angular e PO UI.
+     </p>
+    </div>
+    <div *ngIf="selectedContent === 'objetivo'" class="profile-container">
 
-  <po-page-default p-title="Quem sou eu ?">
-    <p> Meu nome é Bruno Hackbart Nunes, sou técnico em automação industrial,<br>
-      estudante na área de T.I.<br>
-      Atualmente estou fazendo uma graduação em Análise e desenvolvimento de<br>
-      sistemas. Estou iniciando uma jornada de estudos na área de programação, <br>
-      onde estou utilizando as tecnologias : Progress (Open Edge), Angular e PO UI.
-   </p>
+      <p> 
+     </p>
+    </div>
   </po-page-default>
 </div>
+
+   
+
+

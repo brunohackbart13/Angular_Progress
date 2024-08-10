@@ -1,13 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-import {
-  PoMenuItem,
-  PoMenuModule,
-  PoPageModule,
-  PoToolbarModule,
-} from '@po-ui/ng-components';
+import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule, PoWidgetModule, PoModalModule } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-root',
@@ -17,17 +11,22 @@ import {
     RouterOutlet,
     PoToolbarModule,
     PoMenuModule,
-    PoPageModule
+    PoPageModule,
+    PoWidgetModule,
+    PoModalModule,
+    PoAvatarModule // Adicione este módulo para garantir que o componente PoAvatar funcione
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Quem sou eu ?', action: this.onClick.bind(this) },
+    { label: 'Quem sou eu ?', action: () => this.changeContent('profile') },
+    { label: 'Objetivo desse estudo', action: () => this.changeContent('objetivo') }
   ];
+  selectedContent: string = 'profile';
 
-  private onClick() {
-    alert('Clicked in menu item');
+  private changeContent(content: string) {
+    this.selectedContent = content;
   }
 }
