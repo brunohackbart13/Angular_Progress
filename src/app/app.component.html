@@ -1,6 +1,7 @@
 <div class="po-wrapper">
   <po-toolbar p-title="Angular_Progress"></po-toolbar> 
   <po-menu [p-menus]="menus"></po-menu>
+  <router-outlet></router-outlet>
   <po-page-default p-title="Angular_Progress">
     <div *ngIf="selectedContent === 'profile'" class="profile-container">
       <po-avatar
@@ -19,6 +20,9 @@
       <p> 
         O objetivo deste estudo é aprender a integrar o frontend desenvolvido com Angular e PO UI com o banco de dados Progress (OpenEdge). Pretendo entender como conectar o Angular com o Progress para possibilitar a manipulação e visualização de dados de forma eficiente. Este processo inclui a configuração e implementação de uma comunicação fluida entre o frontend e o banco de dados, utilizando as melhores práticas para garantir uma integração robusta e eficiente.
      </p>
+    </div>
+    <div *ngIf="selectedContent === 'busca'" class="search-container">
+      
     </div>
   </po-page-default>
 </div>
