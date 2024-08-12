@@ -1,19 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule, PoWidgetModule, PoModalModule } from '@po-ui/ng-components';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
     PoToolbarModule,
     PoMenuModule,
     PoPageModule,
     PoWidgetModule,
     PoModalModule,
-    PoAvatarModule, // Adicione este módulo para garantir que o componente PoAvatar funcione
+    PoAvatarModule,
+    RouterModule // Adicione este módulo para garantir que o componente PoAvatar funcione
     
     
   ],
@@ -21,10 +21,13 @@ import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+
+  constructor (private router: Router){ }
+  
   readonly menus: Array<PoMenuItem> = [
     { label: 'Quem sou eu ?', action: () => this.changeContent('profile') },
     { label: 'Objetivo desse estudo', action: () => this.changeContent('objetivo') },
-    { label: 'Consulta DB Progress', action: () => this.changeContent('busca') }
+    { label: 'Cronograma', action: () => this.changeContent('cronograma') }
   ];
   selectedContent: string = 'profile';
 

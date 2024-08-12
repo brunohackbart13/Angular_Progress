@@ -2,30 +2,73 @@
   <po-toolbar p-title="Angular_Progress"></po-toolbar> 
   <po-menu [p-menus]="menus"></po-menu>
   <router-outlet></router-outlet>
+  
   <po-page-default p-title="Angular_Progress">
     <div *ngIf="selectedContent === 'profile'" class="profile-container">
       <po-avatar
           p-size="xl"
           p-src="https://avatars.githubusercontent.com/u/127060261?v=4">
       </po-avatar>
-      <p> Meu nome é Bruno Hackbart Nunes, sou técnico em automação industrial,<br>
-        estudante na área de T.I.<br>
-        Atualmente estou fazendo uma graduação em Análise e desenvolvimento de<br>
-        sistemas. Estou iniciando uma jornada de estudos na área de programação, <br>
-        onde estou utilizando as tecnologias : Progress (Open Edge), Angular e PO UI.
+     
+      <p> Meu nome é Bruno Hackbart Nunes, sou técnico em automação industrial e estudante de 
+        Tecnologia da Informação. Atualmente, estou cursando graduação em Análise e Desenvolvimento 
+        de Sistemas e dando os primeiros passos na área de programação. Embora já tenha tido 
+        contato com várias linguagens, estou agora focando em aprender mais sobre tecnologias 
+        como Progress (OpenEdge), Angular e PO UI.
      </p>
     </div>
     <div *ngIf="selectedContent === 'objetivo'" class="profile-container">
 
       <p> 
-        O objetivo deste estudo é aprender a integrar o frontend desenvolvido com Angular e PO UI com o banco de dados Progress (OpenEdge). Pretendo entender como conectar o Angular com o Progress para possibilitar a manipulação e visualização de dados de forma eficiente. Este processo inclui a configuração e implementação de uma comunicação fluida entre o frontend e o banco de dados, utilizando as melhores práticas para garantir uma integração robusta e eficiente.
+        O objetivo deste estudo é aprender a integrar o frontend desenvolvido com Angular e PO UI
+         com o banco de dados Progress (OpenEdge). Pretendo entender como conectar o Angular com o 
+         Progress para possibilitar a manipulação e visualização de dados de forma eficiente.
+          Este processo inclui a configuração e implementação de uma comunicação fluida entre o 
+          frontend e o banco de dados, utilizando as melhores práticas para garantir uma integração
+           robusta e eficiente.
      </p>
     </div>
-    <div *ngIf="selectedContent === 'busca'" class="search-container">
-      
-    </div>
-  </po-page-default>
+    
+    <div *ngIf="selectedContent === 'cronograma'" class="profile-container">
+    <p>
+    
+      Cronograma de Estudos (Primeira parte): Fundamentos de Angular, PO UI e Integração
+      Conceitos Iniciais do Angular<br>
+      <br>
+      1-Compreenda a arquitetura do Angular e os conceitos de componentes e módulos.
+      Estrutura de um Projeto Angular<br>
+      <br>
+      2-Explore a estrutura básica de um projeto Angular, entendendo a função de cada arquivo e pasta.
+      Primeiros Componentes com Angular<br>
+      <br>
+      3-Aprenda a criar e utilizar componentes simples no Angular.
+      Introdução ao PO UI<br>
+      <br>
+      4-Descubra o que é o PO UI e como ele facilita a construção de interfaces no Angular.
+      Utilizando Componentes PO UI<br>
+      <br>
+      5-Implemente componentes básicos do PO UI, como po-button, po-input e po-table.
+      Roteamento e Navegação no Angular<br>
+      <br>
+      6-Configure a navegação entre diferentes páginas e componentes no Angular.
+      Formulários e Validações com PO UI<br>
+      <br>
+      7-Crie e valide formulários usando componentes do PO UI.
+      Trabalhando com Dados<br>
+      <br>
+      8-Utilize po-table e outros componentes para exibir dados de forma dinâmica.
+      Integração com Backend<br>
+      <br>
+      9-Conecte o Angular a um backend, realizando chamadas HTTP para consumir APIs.
+      Conexão com Banco de Dados<br>
+      <br>
+      10Finalize o estudo integrando seu frontend com um banco de dados, usando o backend para consultas e manipulação de dados.
+      </p>
+      </div>
+  
+</po-page-default>
 </div>
+
 
    
 
