@@ -1,7 +1,6 @@
 <div class="po-wrapper">
   <po-toolbar p-title="Angular_Progress"></po-toolbar> 
   <po-menu [p-menus]="menus"></po-menu>
-  <router-outlet></router-outlet>
   
   <po-page-default p-title="Angular_Progress">
     <div *ngIf="selectedContent === 'profile'" class="profile-container">
@@ -13,7 +12,7 @@
       <p> Meu nome é Bruno Hackbart Nunes, sou técnico em automação industrial e estudante de 
         Tecnologia da Informação. Atualmente, estou cursando graduação em Análise e Desenvolvimento 
         de Sistemas e dando os primeiros passos na área de programação. Embora já tenha tido 
-        contato com várias linguagens, estou agora focando em aprender mais sobre tecnologias 
+        contato com várias linguagens, estou agora focado em aprender mais sobre tecnologias 
         como Progress (OpenEdge), Angular e PO UI.
      </p>
     </div>
@@ -64,6 +63,14 @@
       <br>
       10-Finalize o estudo integrando seu frontend com um banco de dados, usando o backend para consultas e manipulação de dados.
       </p>
+      </div>
+
+      <div *ngIf="selectedContent === 'grafico'" class="profile-container">
+
+        <po-chart 
+        [p-series]="series"
+        ></po-chart>
+        Implementação do componente CHART<br>
       </div>
   
 </po-page-default>
