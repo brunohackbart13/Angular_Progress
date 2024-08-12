@@ -16,7 +16,7 @@ import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule
     PoChartModule,
     RouterModule
     
-     // Adicione este módulo para garantir que o componente PoAvatar funcione
+     
     
     
   ],
@@ -40,10 +40,12 @@ export class AppComponent {
   }
 
   series: Array<PoChartSerie> = [
-    { label: 'Angular', data: 30 },
+    { label: 'Angular', data: 20 },
     { label: 'PO UI', data: 20 },
     { label: 'Progress', data: 25},
-    { label: 'OpenEdge', data: 25}
+    { label: 'OpenEdge', data: 25},
+    { label: 'HTML', data: 10}
+
 ];
   
 }
