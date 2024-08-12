@@ -1,0 +1,28 @@
+.business-card {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-details {
+    margin-left: 10px;
+  }
+  
+  .user-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .user-details p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .user-details a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .user-details a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,20 @@
+<div class="po-row">
+    <po-widget
+      class="po-sm-12 po-md-8 po-lg-6"
+      [p-height]="250"
+      p-title="Business Card"
+      p-primary-label="Send Email"
+      >
+      
+      <!-- Componente PO UI Avatar -->
+      <po-avatar class="po-md-4" [p-src]="avatarSrc" p-size="lg"> </po-avatar>
+  
+      <!-- Detalhes do usuário -->
+      <div class="po-md-8">
+        <p><strong>Nome:</strong> {{ userName }}</p>
+        <p><strong>Cargo:</strong> {{ userRole }}</p>
+        <p><strong>E-mail:</strong> <a [href]="'mailto:' + userEmail">{{ userEmail }}</a></p>
+      </div>
+    </po-widget>
+  </div>
+  
