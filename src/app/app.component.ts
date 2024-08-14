@@ -1,3 +1,4 @@
+import { PoFieldModule } from '@po-ui/ng-components';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
@@ -31,7 +32,10 @@ export class AppComponent {
     { label: 'Quem sou eu ?', action: () => this.changeContent('profile') },
     { label: 'Objetivo desse estudo', action: () => this.changeContent('objetivo') },
     { label: 'Cronograma', action: () => this.changeContent('cronograma') },
-    { label: 'PO Chart (Gráfico)', action: () => this.changeContent('grafico') }
+    { label: 'PO Chart (Gráfico)', action: () => this.changeContent('grafico') },
+    { label: 'Search employeer', action: () => this.changeContent('search-employeer') }
+    
+    
   ];
   selectedContent: string = 'profile';
 
