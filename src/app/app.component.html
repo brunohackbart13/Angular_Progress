@@ -8,7 +8,6 @@
           p-size="xl"
           p-src="https://avatars.githubusercontent.com/u/127060261?v=4">
       </po-avatar>
-     
       <p> Meu nome é Bruno Hackbart Nunes, sou técnico em automação industrial e estudante de 
         Tecnologia da Informação. Atualmente, estou cursando graduação em Análise e Desenvolvimento 
         de Sistemas e dando os primeiros passos na área de programação. Embora já tenha tido 
@@ -73,12 +72,15 @@
         Implementação do componente CHART<br>
       </div>
 
-      <div *ngIf="selectedContent === 'grafico'" class="profile-container">
+      <div *ngIf="selectedContent === 'dynamicForm'">
 
-        
+
+        <po-dynamic-form [p-fields]="[{ property: 'name', required: true, showRequired: true }]"> </po-dynamic-form>
+        <po-dynamic-form [p-fields]="[{ property: 'cpf', required: true, showRequired: true }]"> </po-dynamic-form>
+        <po-dynamic-form [p-fields]="[{ property: 'email', required: true, showRequired: true }]"> </po-dynamic-form>
+        <po-dynamic-form [p-fields]="[{ property: 'cep', required: true, showRequired: true }]"> </po-dynamic-form>
       </div>
-
-      
+         
 
   
 </po-page-default>

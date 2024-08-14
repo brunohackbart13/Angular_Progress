@@ -1,8 +1,8 @@
-import { PoFieldModule } from '@po-ui/ng-components';
+
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule, PoWidgetModule, PoModalModule, PoChartSerie, PoChartModule } from '@po-ui/ng-components';
+import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule, PoWidgetModule, PoModalModule, PoChartSerie, PoChartModule, PoDynamicModule, PoDynamicFieldType } from '@po-ui/ng-components';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,7 +15,10 @@ import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule
     PoModalModule,
     PoAvatarModule,
     PoChartModule,
-    RouterModule
+    RouterModule,
+    PoDynamicModule
+    
+    
     
   
     
@@ -33,7 +36,7 @@ export class AppComponent {
     { label: 'Objetivo desse estudo', action: () => this.changeContent('objetivo') },
     { label: 'Cronograma', action: () => this.changeContent('cronograma') },
     { label: 'PO Chart (Gráfico)', action: () => this.changeContent('grafico') },
-    { label: 'Search employeer', action: () => this.changeContent('search-employeer') }
+    { label: 'Dynamic Form', action: () => this.changeContent('dynamicForm') }
     
     
   ];
@@ -51,5 +54,5 @@ export class AppComponent {
     { label: 'HTML', data: 10}
 
 ];
-  
 }
+
