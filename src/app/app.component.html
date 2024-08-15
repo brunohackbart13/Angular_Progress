@@ -73,14 +73,23 @@
       </div>
 
       <div *ngIf="selectedContent === 'dynamicForm'">
-
-
         <po-dynamic-form [p-fields]="[{ property: 'name', required: true, showRequired: true }]"> </po-dynamic-form>
         <po-dynamic-form [p-fields]="[{ property: 'cpf', required: true, showRequired: true }]"> </po-dynamic-form>
         <po-dynamic-form [p-fields]="[{ property: 'email', required: true, showRequired: true }]"> </po-dynamic-form>
         <po-dynamic-form [p-fields]="[{ property: 'cep', required: true, showRequired: true }]"> </po-dynamic-form>
       </div>
          
+      <div *ngIf="selectedContent === 'po calendar'">
+        <po-calendar ></po-calendar>
+      </div>
+
+      <div *ngIf="selectedContent === 'po menu'">
+
+        
+
+      </div>
+
+
 
   
 </po-page-default>

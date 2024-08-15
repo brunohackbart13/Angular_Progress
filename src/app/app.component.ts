@@ -2,7 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule, PoWidgetModule, PoModalModule, PoChartSerie, PoChartModule, PoDynamicModule, PoDynamicFieldType } from '@po-ui/ng-components';
+import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule, PoWidgetModule, PoModalModule, PoChartSerie, PoChartModule, PoDynamicModule, PoCalendarModule } from '@po-ui/ng-components';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,7 +16,8 @@ import { PoAvatarModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule
     PoAvatarModule,
     PoChartModule,
     RouterModule,
-    PoDynamicModule
+    PoDynamicModule,
+    PoCalendarModule
     
     
     
@@ -36,7 +37,9 @@ export class AppComponent {
     { label: 'Objetivo desse estudo', action: () => this.changeContent('objetivo') },
     { label: 'Cronograma', action: () => this.changeContent('cronograma') },
     { label: 'PO Chart (Gráfico)', action: () => this.changeContent('grafico') },
-    { label: 'Dynamic Form', action: () => this.changeContent('dynamicForm') }
+    { label: 'Dynamic Form', action: () => this.changeContent('dynamicForm') },
+    { label: 'Po Calendar', action: () => this.changeContent('po calendar') },
+    //{ label: 'PO Menu - Human Resources', action: () => this.changeContent('po menu') }
     
     
   ];
@@ -49,10 +52,13 @@ export class AppComponent {
   series: Array<PoChartSerie> = [
     { label: 'Angular', data: 20 },
     { label: 'PO UI', data: 20 },
-    { label: 'Progress', data: 25},
+   { label: 'Progress', data: 25},
     { label: 'OpenEdge', data: 25},
     { label: 'HTML', data: 10}
 
 ];
+
+
 }
+
 
